@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Tangerine:wght@700&display=swap');
+/* font-family: 'Tangerine', cursive; */               
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    transition: all .7s ease;
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{background-color: #0c0d0c; color: beige;}
+
+header{width: 100vw; display: flex; padding: 4rem 2rem;}
+header section{width: 100vw; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center ; }
+header section h1{font-family: "tangerine", cursive; font-size: 8rem; margin: 1rem 0; opacity: 0; animation: main 1s 3.4s 1 forwards ease;}
+header section h1 span{color: red;}
+
+header section h3{position: absolute; top: 40%; left: 25%; font-size:6rem; letter-spacing: -.3rem; color: white; font-family: 'josefin sans', sans-serif; font-weight: 300; margin: 1rem 0;  animation: subtitle 1s 3.5s 1 forwards ease;}
+header section h3 span{opacity: 0; transition: all 1s ease;}
+header section h3 span.sub{opacity: 1; color: #ff0000;}
+@keyframes subtitle {    0%{font-size: 5rem;} 50%{font-size: 5rem;} 100%{ position: relative; top: 0; left: 0; font-size: 5rem;}   }
+
+header section h4{font-size: 3.5rem; color: #ff0000; margin: 1rem 0; font-family: 'poppins', sans-serif; opacity: 0; animation: main 1s 4s 1 forwards ease;  }
+header section h4 span{color: beige; font-weight: lighter;}
+header img{width: 50vw; animation: main 1s 4s 1 forwards ease; opacity: 0; border-radius: 1%;}
+@keyframes main {to{opacity: 1;}}
+
+.scrollsec{width: 100vw; height: 10vh; text-align: end; margin: 2rem 0; padding: 0 2rem; opacity: 0;  animation: main 1s 4s 1 forwards ease;}
+
+.about{width: 100vw; height:auto; margin: 5rem 0; padding: 0 2rem;}
+.about h1,.timeline h1, .facts h1, .contact h1{font-size: 6.5rem; font-family: 'Tangerine', cursive; color: #ff0000; font-weight:bolder; margin: 2rem; transform: translateX(-5%); opacity: 0; transition: all 1s ease;}
+.about h1 span,.timeline h1 span, .facts h1 span, .contact h1 span{color: white;}
+.about p{font-size: 2.2rem; font-family: 'poppins', sans-serif; padding: 0 5rem;transform: translateX(-5%); opacity: 0; transition: all 1s ease;}
+.about p span{color: #ff0000;}
+
+.timeline{width: 100vw; height: auto; margin: 5rem 0; padding: 0 2rem; position: relative;}
+
+.timeline .container{width: 100%; height: auto; margin:5rem 2rem; padding: 0 15rem; display: grid; grid-template-columns: 1fr 2px 1fr; grid-template-rows: repeat(10, auto); }
+
+.timeline .container .l:nth-of-type(odd), .timeline .container .r:nth-of-type(even){ margin: 1rem 0; }
+.timeline .container .l:nth-of-type(odd) section,.timeline .container .r:nth-of-type(even) section{margin:5rem; text-align: right; }
+.timeline .container .r:nth-of-type(even) section{text-align: left;}
+.timeline .container .l:nth-of-type(odd) section h2,.timeline .container .r:nth-of-type(even) section h2{font-size: 5rem; font-family: 'tangerine', cursive; color: #ff0000; }
+.timeline .container .l:nth-of-type(odd) section p,.timeline .container .r:nth-of-type(even) section p{font-family: 'josefin sans',sans-serif; font-size: 1.8rem; padding: 2rem; font-weight: lighter; line-height: 1.3; letter-spacing: .05rem; }
+.timeline .container .l:nth-of-type(odd) section p span,.timeline .container .r:nth-of-type(even) section p span{color: #ff0000;}
+
+.timeline .container .m{background-color: white; position: relative;}
+.timeline .container .m circle{width: 1.5rem; height: 1.5rem; background-color: white; position: absolute; right: -.6rem; top: 50%; transform: translateY(-50%) rotate(45deg);}
+
+.timeline .container .r:nth-of-type(odd),.timeline .container .l:nth-of-type(even){ display: flex; justify-content: center; align-items: center;}
+.timeline .container .r:nth-of-type(odd) img,.timeline .container .l:nth-of-type(even) img{height: 25rem; width:35rem ; border-radius: 2%;}
+
+.timeline .container .l{transform: translateX(-5%); opacity: 0; transition: all 1s ease;}
+.timeline .container .r{transform: translateX(5%); opacity: 0; transition: all 1s ease;}
+
+
+.facts{width:100vw; margin: 5rem 0; padding: 0 3rem;}
+.facts h1 b{font-weight: lighter; font-family: 'poppins',sans-serif;}
+.facts ul{padding: 0 5rem; line-height: 1.3;}
+.facts ul li{list-style: none; font-size: 2rem; font-family: 'josefon sans', sans-serif; margin: 1rem 0; transform: translateX(-5%); opacity: 0; transition: all 1s ease;}
+.facts ul li span{color: red;}
+
+.tribute{height: 10vh; display: flex; align-items: center; justify-content: center; margin: 5rem 0; overflow: hidden;}
+.tribute section span{ font-size: 4rem; margin: 0 .5rem; font-family: 'josefin sans', sans-serif; position: relative; top: 10rem;}
+.tribute section.two span:nth-child(2){font-size: 5rem; font-family: 'tangerine',cursive;color: #ff0000;}
+
+.tribute.js section.one span:first-child{animation: tribute 2s 0s forwards 1 ease;}
+.tribute.js section.one span:nth-child(2){animation: tribute 2s .5s forwards 1 ease;}
+.tribute.js section.one span:nth-child(3){animation: tribute 2s 1s forwards 1 ease;}
+.tribute.js section.two span:first-child{animation: tribute 2s 1.5s forwards 1 ease;}
+.tribute.js section.two span:nth-child(2){animation: tribute 2s 2s forwards 1 ease;}
+.tribute.js section.two span:nth-child(3){animation: tribute 2s 2.5s forwards 1 ease;}
+/* .tribute.js section.two span:nth-child(4){animation: tribute 2s 3s forwards 1 ease;} */
+
+@keyframes tribute {100%{top: 0;}}
+
+.contact{width: 100vw; margin: 2rem 0;}
+.contact h1{font-size: 5rem;}
+.contact .con{height: 8vh; display: flex; justify-content: space-evenly; align-items: center; }
+.contact .con i{font-size: 3rem; color: beige; transition:all .5s ease ; text-shadow: 2px 2px 2px red; }
+.contact .con i:hover{color: #ff0000; transform: scale(1.3); text-shadow: 2px 2px 2px white; }
+
+/* ⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀ */
+/* for js */
+    /* timeline */
+    
+    
+
+
+/* ⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀ */
+/* ⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀ */
+
+@media (max-width:1000px) {
+    header{height: 70vh;}
+    header img{width: 40vw; height: 60vh;}
+    header section h1{font-size: 6rem;}
+    header section h3{left: 15%;}
+    @keyframes subtitle {    0%{font-size: 4rem;} 100%{ position: relative; top: 0; left: 0; font-size: 4rem;}   }
+    header section h4{font-size: 2.5rem;}
+
+    .about{animation: main 1s 4s 1 forwards ease; opacity: 0;}
+    
+    .scrollsec{display: none;}
+
+    .timeline .container{margin: 5rem 0; padding: 0 5rem;}
+    .timeline .container .l:nth-of-type(odd) section,.timeline .container .r:nth-of-type(even) section{margin: 4rem;}
+    .timeline .container .l:nth-of-type(odd) section p,.timeline .container .r:nth-of-type(even) section p{padding: 1rem 0;}
+
+}
+
+
+/* ⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀ */
+/* ⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀↽⇀ */
+
+@media (max-width:500px) {
+    header{height: 100vh; flex-direction: column; padding: 4rem 0;}
+    header section h1{font-size: 4.5rem; margin: 0;}
+    header section h3{font-size: 5rem; left: 10%; margin: 1rem 0;}
+    @keyframes subtitle {    0%{font-size: 3rem;} 100%{ position: relative; top: 0; left: 0; font-size: 3rem;}   }
+    header section h4{font-size: 2rem; margin: 0;}
+    header img{width: 80vw; height: 70%; margin:auto ;}
+
+    .about{padding: 0; opacity: 1;}
+    .about h1, .timeline h1{font-size: 5rem;}
+    .about p{font-size: 1.6rem; padding: 0 3rem;}
+
+    .timeline{padding:0; max-width: 100vw;}
+    .timeline .container{margin: 0; padding: 0rem; grid-template-columns:49.5   vw 1px 49.5vw;  }
+    
+    .timeline .container .l:nth-of-type(odd), .timeline .container .r:nth-of-type(even){ margin:4rem 0;}
+    
+    .timeline .container .l:nth-of-type(odd) section,.timeline .container .r:nth-of-type(even) section{margin:0rem; padding: 0 1rem;}
+    
+    .timeline .container .l:nth-of-type(odd) section h2,.timeline .container .r:nth-of-type(even) section h2{font-size: 3rem;}
+    
+    .timeline .container .l:nth-of-type(odd) section p,.timeline .container .r:nth-of-type(even) section p{font-family: 'josefin sans',sans-serif; width: 100%; font-size: 1.3rem; padding: 1rem; font-weight: lighter; line-height: 1.3; letter-spacing: 0rem; }
+
+    .timeline .container .m circle{width: 1rem; height: 1rem; right: -.5rem}
+    
+    .timeline .container .r:nth-of-type(odd) img,.timeline .container .l:nth-of-type(even) img{height: 14rem; width:18rem ; transform: rotate(90deg); }
+    .timeline .container .l:nth-of-type(even) img{transform: rotate(270deg);}
+
+    .facts{padding: 0;}
+    .facts h1{font-size: 5rem;}
+    .facts h1 b{font-size: 4rem;}
+    .facts ul{padding: 0 2.5rem;}
+
+    .tribute{width: 100vw; height: 15vh; flex-direction: column; justify-content: space-around; padding: 0 2rem;}
+    .tribute section span{font-size: 3rem;}
+    .tribute section.two span:nth-child(2){font-size: 3.5rem;}
+}
